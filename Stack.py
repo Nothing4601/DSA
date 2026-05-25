@@ -27,8 +27,23 @@ class Stack:
           print(self.container[-1]) 
 #      or print(self.container[ self.length() ])
         else:
-            print('Stack is empty')
+            print('stack is empty')
 
+# using consept of container which is close from top and open at bottom
+    #   def push(self,value):
+    #      self.container.insert(0,value)
+
+    #   def pop(self) :
+    #     if self.container:
+    #       self.container.pop(0) 
+    #     else:
+    #       print("Stack is empty")
+    
+    #   def peek(self):
+    #     if self.container:
+    #       print(self.container[0]) 
+    #     else:
+    #         print('Stack is empty')
 a= Stack()
 print(a.length()) #0
 a.pop()   # Stack is empty
