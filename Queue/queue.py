@@ -33,6 +33,7 @@ class Queue_Array:
           self.queue.pop(0) # always delete first element as FIFO
 
 # Using Linked List 
+# below code use function form LinkedList/Singly_LL.py file
 import os
 import sys
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
