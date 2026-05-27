@@ -4,8 +4,8 @@ class Node:
         self.next = next
 
 class linkedlist:
-    def __init__(self,data):
-        self.n1 = Node(data)
+    def __init__(self):
+        self.n1 = None
         
     def LL_add(self,value):
         if self.n1 is None:
@@ -23,7 +23,7 @@ class linkedlist:
             self.n1=self.n1.next
         else:
             temp = self.n1
-            while(temp.next!=None and temp.next.data != value ):
+            while(temp.next!=None and temp.next.data != value ): # check temp.next is not none --> happens when value is not in the lsit
                 temp=temp.next
             if temp.next is not None:
                temp.next = temp.next.next
@@ -39,7 +39,8 @@ class linkedlist:
                 temp = temp.next
             print(temp.data)
     
-a = linkedlist(50)
+a = linkedlist()
+a.LL_add(50)
 a.LL_add(10)
 a.LL_add(20)
 a.LL_add(30)
@@ -48,4 +49,6 @@ a.LL_add(60)
 a.LL_print()
 a.LL_delete(80)
 a.LL_print()
-        
+a.LL_delete(30)
+a.LL_delete(60)
+a.LL_print()
