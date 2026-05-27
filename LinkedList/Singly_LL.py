@@ -29,6 +29,7 @@ class linkedlist:
                temp.next = temp.next.next
             else:
                 print(f'{value} is not in the list')
+
     def LL_print(self):
         if self.n1 == None:
            print('Linked List is empty')
@@ -39,16 +40,22 @@ class linkedlist:
                 temp = temp.next
             print(temp.data)
     
-a = linkedlist()
-a.LL_add(50)
-a.LL_add(10)
-a.LL_add(20)
-a.LL_add(30)
-a.LL_add(40)
-a.LL_add(60)
-a.LL_print()
-a.LL_delete(80)
-a.LL_print()
-a.LL_delete(30)
-a.LL_delete(60)
-a.LL_print()
+    def  first_LLelement(self):
+        if self.n1:
+            return self.n1.data
+        else:
+            return 
+if __name__ == "__main__":   
+ a = linkedlist()
+ a.LL_add(50)
+ a.LL_add(10)
+ a.LL_add(20)
+ a.LL_add(30)
+ a.LL_add(40)
+ a.LL_add(60)
+ a.LL_print()
+ a.LL_delete(80)
+ a.LL_print()
+ a.LL_delete(30)
+ a.LL_delete(60)
+ a.LL_print()
