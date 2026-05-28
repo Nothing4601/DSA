@@ -1,7 +1,21 @@
+# In a normal queue:
+# - Insertion happens at the rear
+# - Deletion happens from the front
+
+# Problem in fixed-size linear queue:
+# - Deleted front spaces cannot be reused
+# - Rear keeps moving forward
+# - This causes memory wastage
+
+# Solution: Circular Queue
+# - Last position connects back to the first position
+# - Freed spaces are reused efficiently
+# - Prevents memory wastage
+
 class Circular_queue:
     def __init__(self,size):
         self.size=size
-        self.cq=[size]
+        self.cq=[None]*size
         self.front=self.rear=-1
 
     def cq_add(self,value): # at last
@@ -21,6 +35,7 @@ class Circular_queue:
             print(f'{self.cq[self.front]} is deleted')
             self.front=self.rear=-1
         else:
+           print(f'{self.cq[self.front]} is deleted')
            self.front = (self.front + 1)%self.size
 
 a = Circular_queue(5)
@@ -31,7 +46,12 @@ a.cq_add(4)
 a.cq_add(5)
 a.cq_delete()
 a.cq_add(10)
-a.cq_add(15)
+a.cq_add(15) # circular queue is full
+a.cq_delete()
+a.cq_delete()
+a.cq_delete()
+a.cq_delete()
+a.cq_delete()
 a.cq_delete()
 
 
