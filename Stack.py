@@ -6,6 +6,8 @@
     #  ii) Pop : delete last element
     #  iii) Peek : Print top elementuse
 
+# using consept of container which is open from top and bottom is close
+# at last index, element is remove and add
 class Stack:
     def __init__(self):
         self.container = []
@@ -30,6 +32,7 @@ class Stack:
             print('stack is empty')
 
 # using consept of container which is close from top and open at bottom
+#at 0 index, element is remove and add
     #   def push(self,value):
     #      self.container.insert(0,value)
 
