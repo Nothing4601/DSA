@@ -37,23 +37,23 @@ class Queue_Array:
 import os
 import sys
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
-from LinkedList.Singly_LL import Node,linkedlist
+from LinkedList.Singly_LL import Node,LinkedList
 class Queue_LL:
     def __init__(self):
-        self.queue = linkedlist()
+        self.queue = LinkedList()
     
     def q_add_LL(self,value):
-        self.queue.LL_add(value)
+        self.queue.add_LL(value)
     
     def q_isempty_LL(self):
-        return self.queue.first_LLelement() is None
+        return self.queue.firstelement_LL() is None
     
     def q_pop_LL(self): # pop first element
         if self.q_isempty_LL():
             print("Queue is Empty")
         else:
-            print(f'{self.queue.first_LLelement()} is deleted')
-            self.queue.LL_delete(self.queue.first_LLelement()) # first element delete
+            print(f'{self.queue.firstelement_LL()} is deleted')
+            self.queue.delete_LL(self.queue.firstelement_LL()) # first element delete
         
     
 a=Queue_Array()
