@@ -9,10 +9,11 @@
 def find_subarray_sum(a, target): # a is array of numbers
    start=end=0
    while(start<=end and end<len(a)): 
-     if (sum(a[start:end+1])==target): # more time complexity as compute sum in each time 
+     window_sum = sum(a[start:end+1])
+     if (window_sum==target): # more time complexity as compute sum in each time 
         print(start,':',end)
         return
-     elif (sum(a[start:end+1]) < target):
+     elif (window_sum < target):
          end+=1
      else:
          start+=1
