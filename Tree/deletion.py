@@ -40,7 +40,7 @@ def deletion(root,value):
         else:
             succ = get_successor(root) # succ --> address of successor
             root.data = succ.data
-            root.right = deletion(root.right, succ.data)
+            root.right = deletion(root.right, succ.data) # successor is always in right side of given root
             
     elif root.data < value:
         root.right = deletion(root.right,value)

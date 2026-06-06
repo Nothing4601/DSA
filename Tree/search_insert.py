@@ -56,4 +56,4 @@ inorder(root)
 print(root)
 search(root,9)
 search(root,2)
-print(search(root,0))
+print(search(root,0))  # print 'None' also(with Element Found!) as we return nothing in function
