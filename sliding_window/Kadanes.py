@@ -3,7 +3,6 @@
 # If the running sum becomes negative, start a new subarray from the next index.
 # Whenever a larger sum is found, update the maximum sum and store
 # the start and end indices of that subarray.
-#
 # Time Complexity: O(n)
 # Space Complexity: O(1)
 import math
