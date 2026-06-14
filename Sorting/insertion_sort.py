@@ -1,3 +1,10 @@
+# Insertion Sort
+# Insert each element into its correct position in the
+# already sorted left part of the array.
+#
+# Time Complexity: O(n²)
+# Best Case: O(n) (already sorted)
+# Space Complexity: O(1)
 def Insertion_sort(a):
     n =len(a)
     for i in range(n):
