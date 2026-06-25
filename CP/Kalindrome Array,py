@@ -1,0 +1,60 @@
+def fun_():
+   n = int(input())
+   a=list(map(int,input().split()))
+   
+   Kalindrom = True
+   for i in range(n//2):
+      if a[i]!=a[n-1-i]:
+         Kalindrom = False
+         remove_1_index  = i
+         remove_2_index = n-1-i
+         break
+      
+   if Kalindrom:
+      print('Yes')
+      return
+   
+   # remove element at index 'remove_1_index'
+   Kalindrom = True
+   l=remove_1_index + 1
+   r=remove_2_index
+   while l<r:
+      if a[l]!=a[r]:
+         if a[l]==a[remove_1_index]:
+            l+=1
+         elif a[r]==a[remove_1_index]:
+            r-=1
+         else:
+            Kalindrom = False
+            break
+      else :
+         l+=1
+         r-=1
+   if Kalindrom:
+      print('Yes')
+      return
+   
+   #remove element at index 'remove_2_index'
+   Kalindrom = True
+   l=remove_1_index
+   r=remove_2_index-1
+   while l<r:
+      if a[l]!=a[r]:
+         if a[l]==a[remove_2_index]:
+            l+=1
+         elif a[r]==a[remove_2_index]:
+            r-=1
+         else:
+            Kalindrom = False
+            break
+      else :
+         l+=1
+         r-=1
+   print('Yes') if Kalindrom else print('No')
+
+t = int(input())
+while t:
+
+  fun_()
+
+  t-=1
