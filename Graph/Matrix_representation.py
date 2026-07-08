@@ -21,7 +21,7 @@ class Graph():
     
     def add_edge(self,src,dest): # undirected 
 
-        if src<0 or src>self.vertex or dest<0 or dest>self.vertex:
+        if src<0 or src>=self.vertex or dest<0 or dest>=self.vertex:
             print('Invalid Edge')
             return 
         
