@@ -1,4 +1,5 @@
 # A graph is a non-linear data structure consisting of nodes (vertices) connected by edges. 
+# every tree is graph but reverse is not true( graoh is cyclic also)
 # It is used to model complex networks and relationships, where nodes represent entities (e.g., people, cities) and edges represent the connections between them 
 
 # Directed Graph: goes only in one direction ex; we can go from 1-->2 but can not go 2-->1

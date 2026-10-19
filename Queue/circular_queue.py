@@ -16,7 +16,8 @@ class Circular_queue:
     def __init__(self,size):
         self.size=size
         self.cq=[None]*size
-        self.front=self.rear=-1
+        self.front=-1
+        self.rear=-1
 
     def cq_add(self,value): # at last
         if self.front==-1:
